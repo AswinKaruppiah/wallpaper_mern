@@ -1,0 +1,43 @@
+.adminlogin {
+  height: 80vh;
+  width: 100vw;
+}
+
+.adminlogin form {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.adminlogin input {
+  width: 40%;
+  height: 10%;
+  font-size: 1.5rem;
+}
+
+.adminlogin .login-ad {
+  width: 20%;
+}
+
+.adminlogin input:placeholder-shown {
+  font-size: 1.5rem;
+  padding: 0.3%;
+}
+
+.login-ad {
+  margin: 50px;
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: none;
+  border-color: transparent;
+  background-color: #90b77d;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-family: font;
+  letter-spacing: 1.5px;
+}
+.login-ad button:hover {
+  background-color: #628e4d;
+}

@@ -1,0 +1,224 @@
+.wallpaper {
+  display: grid;
+  grid-template-columns: auto;
+  position: relative;
+  gap: 1rem;
+  font-family: font;
+}
+
+.photoinfo button {
+  margin: 0;
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  cursor: pointer;
+  padding: 10px 20px;
+  outline: none;
+  border-color: transparent;
+  background-color: #90b77d;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-family: font;
+  letter-spacing: 1.5px;
+}
+.downloadform button {
+  cursor: pointer;
+  padding: 10px 20px;
+
+  border-color: transparent;
+  background-color: #da2727;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-family: font;
+  letter-spacing: 1.5px;
+}
+.icon {
+  margin-bottom: -7px;
+  margin-left: 1px;
+}
+/* .photos {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1.5%;
+  transition: transform 300ms;
+} */
+.holder {
+  height: 60vh;
+  margin: 1%;
+  position: relative;
+  color: aliceblue;
+  transition: transform 300ms;
+  border-radius: 1%;
+  overflow: hidden;
+}
+/* .holder:hover {
+  transform: scale(0.9);
+} */
+
+/* .holder:nth-child(1) {
+  grid-column: span 2;
+}
+
+.holder:nth-child(4) {
+  grid-column: span 2;
+}
+
+.holder:nth-child(5) {
+  grid-column: span 3;
+}
+.holder:nth-child(9) {
+  grid-column: span 3;
+}
+
+.holder:nth-child(11) {
+  grid-column: span 2;
+} */
+.photoinfo {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: -10rem;
+
+  transition: 500ms;
+}
+.holder:hover .photoinfo {
+  bottom: 0;
+  backdrop-filter: blur(5px);
+}
+
+.photoinfo h2:nth-child(1) {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(20%, -50%);
+  font-size: 300%;
+  transition: 500ms;
+}
+.holder:hover .photoinfo h2:nth-child(1) {
+  font-size: 500%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.photoinfo h2:nth-child(2) {
+  margin: 0;
+  position: absolute;
+  bottom: 15%;
+  left: 5%;
+  font-size: 250%;
+}
+.photoinfo h2:nth-child(3) {
+  margin: 0;
+  position: absolute;
+  bottom: 5%;
+  font-size: 150%;
+  left: 5%;
+}
+.downloadform {
+  font-family: font;
+  height: 65vh;
+  width: 35vw;
+  border-radius: 3%;
+  background-color: #ececf3;
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+#formphotos {
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+#myAnchor {
+  font-size: 1.5rem;
+}
+
+#myAnchor {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-family: helvetica;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 100ms;
+  width: 50%;
+}
+
+#myAnchor:hover {
+  text-decoration: underline;
+  transform: scale(1.18);
+}
+
+#myAnchor:active {
+  color: black;
+}
+
+@media (max-width: 500px) and (min-width: 0px) {
+  .wallpaper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .holder {
+    grid-column: auto;
+  }
+
+  .photoinfo h2:nth-child(1) {
+    font-size: 150%;
+  }
+
+  .photoinfo h2:nth-child(2) {
+    bottom: 12%;
+    font-size: 150%;
+  }
+  .photoinfo h2:nth-child(3) {
+    font-size: 100%;
+  }
+  .holder:hover .photoinfo h2:nth-child(1) {
+    font-size: 300%;
+  }
+  .downloadform {
+    width: 80vw;
+  }
+}
+
+/* md: 658px, */
+/* @media (max-width: 599px) and (min-width: 349px) {
+  .maincontent h1 {
+    font-size: 2.5rem;
+  }
+  .subcontent p {
+    font-size: 1.5rem;
+  }
+} */
+
+/* lg: 800px, */
+/* @media (max-width: 749px) and (min-width: 599px) {
+  .maincontent h1 {
+    font-size: 3.1rem;
+  }
+  .subcontent p {
+    font-size: 2.1rem;
+  }
+} */
+
+/* xl */
+
+/* @media (max-width: 1100px) and (min-width: 749px) {
+  .maincontent h1 {
+    font-size: 3.7rem;
+  }
+  .subcontent p {
+    font-size: 2.5rem;
+  }
+} */

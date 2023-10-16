@@ -1,0 +1,100 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  position: relative;
+  color: aliceblue;
+  margin: 1.5%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  border-radius: 3px;
+  font-family: font;
+  /* position: fixed; */
+}
+.lap-view ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  gap: 6rem;
+  font-size: 1.3rem;
+}
+.lap-view ul li {
+  transition: transform 200ms;
+}
+.lap-view ul li:hover {
+  transform: scale(1.18);
+}
+ul a {
+  text-decoration: none;
+  color: aliceblue;
+}
+.logo img {
+  height: 50px;
+  width: 50px;
+  margin: 1.8%;
+  margin-top: 10%;
+}
+.logo {
+  display: flex;
+}
+
+.logo h1 {
+  font-size: 2rem;
+}
+
+.mob-view {
+  display: none;
+}
+.mob-listhidden {
+  display: none;
+}
+.mob-listshow {
+  width: auto;
+  height: auto;
+  position: absolute;
+  border-radius: 20px;
+  background-color: rgb(61, 55, 55);
+  padding: 20px;
+  right: 5%;
+  z-index: 5;
+}
+
+.mob-view ul {
+  display: flex;
+  padding-left: 0;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+
+  justify-content: center;
+  list-style-type: none;
+  gap: 2rem;
+  font-size: 1.3rem;
+}
+
+@font-face {
+  font-family: font;
+  src: url("./MADE\ TOMMY\ Light_PERSONAL\ USE.otf");
+}
+
+@media (max-width: 1000px) and (min-width: 0px) {
+  .lap-view {
+    display: none;
+  }
+  .mob-view {
+    display: flex;
+  }
+
+  .logo img {
+    height: 30px;
+    width: 30px;
+    margin-top: 16%;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+}
