@@ -9,7 +9,7 @@ function Admin() {
   const { data, loading } = Usefetch("http://localhost:3001/admin/adminpanel", {
     headers: { token: getitem },
   });
-  console.log(data);
+
   // useEffect(() => {
   //   let getitem = localStorage.getItem("token");
 

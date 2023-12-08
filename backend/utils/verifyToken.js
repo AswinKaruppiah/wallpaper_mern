@@ -1,28 +1,33 @@
 import jwt from "jsonwebtoken";
 
 export const verifytoken = async (req, res, next) => {
-  const token = req.headers["token"];
+  var token = req.headers["token"];
+  console.log(res.headersSent);
 
-  if (!token)
-    //no token
-    return res.status(200).json({
-      status: "404",
-      data: "you are not authenticated!!",
+  function res_json(status, text) {
+    res.status(200).json({
+      status: status,
+      data: text,
     });
+  }
+
+  if (!token) return res_json("404", "you are not authenticated!!");
+  //no token
 
   // wrong token
   jwt.verify(token, process.env.jwt, (err, user) => {
-    if (err)
-      return res.status(200).json({
-        status: "404",
-        data: "token is not valid",
-      });
+    if (err) return res_json("404", "token is not valid");
 
     //user infromation
     req.user = user;
     console.log(user);
   });
-  next();
+  //If headersSent is true then that literally means that headers have been already
+  // sent and from that point you cannot add / set any additional headers(train has gone that is, you are late and cannot ride it anymore).
+  // console.log(res.headersSent);
+  if (!res.headersSent) {
+    next();
+  }
 };
 
 export const verifyadmin = async (req, res, next) => {
