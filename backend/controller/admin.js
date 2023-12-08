@@ -50,7 +50,8 @@ export const login = async (req, res, next) => {
     const token = jwt.sign(
       // id,onadmin is your wish of information
       { id: user._id, onAdmin: user.onAdmin },
-      process.env.jwt
+      process.env.jwt,
+      { expiresIn: "2h" }
     );
 
     // show details

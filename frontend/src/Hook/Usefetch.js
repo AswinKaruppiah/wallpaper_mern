@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Axios from "axios";
 
-const Usefetch = (url) => {
+const Usefetch = (url, header) => {
   const [data, setData] = useState();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
@@ -10,8 +10,9 @@ const Usefetch = (url) => {
     const fetchdata = async () => {
       setLoading(true);
       try {
-        const res = await Axios.get(url);
+        const res = await Axios.get(url, header);
         setData(res.data);
+        console.log(res.data);
       } catch (err) {
         setError(err);
       }

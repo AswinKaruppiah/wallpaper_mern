@@ -1,15 +1,22 @@
 import jwt from "jsonwebtoken";
 
 export const verifytoken = async (req, res, next) => {
-  const token = req.cookies.access_token;
+  const token = req.headers["token"];
 
   if (!token)
     //no token
-    return res.json("you are not authenticated!!");
+    return res.status(200).json({
+      status: "404",
+      data: "you are not authenticated!!",
+    });
 
   // wrong token
   jwt.verify(token, process.env.jwt, (err, user) => {
-    if (err) return res.json("token is not valid");
+    if (err)
+      return res.status(200).json({
+        status: "404",
+        data: "token is not valid",
+      });
 
     //user infromation
     req.user = user;

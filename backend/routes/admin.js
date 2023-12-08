@@ -7,13 +7,13 @@ import {
   getadmin,
   login,
 } from "../controller/admin.js";
-import { verifyadmin } from "../utils/verifyToken.js";
+import { verifyadmin, verifytoken } from "../utils/verifyToken.js";
 
 const router = express.Router();
 
 router.post("/login", login);
 // router.post("/athu", verifyadmin, getphoto);
-router.get("/adminpanel", getphoto);
+router.get("/adminpanel", verifytoken, getphoto);
 router.delete("/:id", deletephoto);
 // postman api
 router.delete("/:id", deleteadmin);

@@ -26,7 +26,7 @@ function Uploadpage() {
     e.preventDefault();
     await firebase();
     await axios
-      .post("http://localhost:8800/create", user)
+      .post("http://localhost:3001/create", user)
       .then((res) => {
         console.log(res);
       })

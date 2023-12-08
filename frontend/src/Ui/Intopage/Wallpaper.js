@@ -6,7 +6,7 @@ import ExitToAppOutlinedIcon from "@material-ui/icons/ExitToAppOutlined";
 import Loading from "../loading/Loading";
 
 function Wallpaper() {
-  const { data, loading } = Usefetch("http://localhost:8800/");
+  const { data, loading } = Usefetch("http://localhost:3001/");
 
   const download = (id, imgurl) => {
     downloadfunction(id, imgurl);
@@ -42,7 +42,7 @@ function Wallpaper() {
         <>
           {data && (
             <div className="wallpaper">
-              {data.map((photodetial) => (
+              {data.wallpapers.map((photodetial) => (
                 <>
                   <div
                     style={{

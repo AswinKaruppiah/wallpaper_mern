@@ -37,7 +37,7 @@ export const createphoto = async (req, res) => {
 export const getphoto = async (req, res) => {
   try {
     const wallpapers = await Wallpaper.find();
-    res.status(200).json(wallpapers);
+    res.status(200).json({ status: "200", wallpapers });
   } catch (err) {
     res.status(500).json(err);
   }

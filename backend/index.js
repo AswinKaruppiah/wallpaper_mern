@@ -43,7 +43,7 @@ app.use(cookieParser());
 app.use("/", photo);
 app.use("/admin", Admin);
 
-app.listen(8800, () => {
+app.listen(3001, () => {
   connect();
   console.log("sever starts");
 });

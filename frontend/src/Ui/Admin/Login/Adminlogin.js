@@ -17,16 +17,17 @@ function Adminlogin() {
     e.preventDefault();
     try {
       const { data } = await axios
-        .post("http://localhost:8800/admin/login", admin)
+        .post("http://localhost:3001/admin/login", admin)
         .then((res) => {
           if (res.data.status === "ok") alert("login successfull");
-          window.localStorage.setItem("token", JSON.stringify(res.data.data));
+          localStorage.setItem("token", res.data.data);
           window.location.href = "./adminpanel";
         });
     } catch (err) {
       console.log(err);
     }
   };
+
   return (
     <div className="adminlogin">
       <form onSubmit={(e) => submitfunction(e)}>

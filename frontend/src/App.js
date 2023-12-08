@@ -7,6 +7,9 @@ import Nav from "./Ui/Nav/Nav";
 import Uploadpage from "./Ui/Uploadpage/Uploadpage";
 
 function App() {
+  setTimeout(function () {
+    localStorage.removeItem("token");
+  }, 3600000);
   return (
     <div className="App">
       <Nav />
